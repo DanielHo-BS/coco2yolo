@@ -1,0 +1,11 @@
+Text
+Table
+Picture
+Page-header
+Page-footer
+Caption
+Formula
+List-item
+Section-header
+Title
+Footnote
