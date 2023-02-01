@@ -31,25 +31,22 @@ def main():
     # cats = coco.loadCats(coco.getCatIds())
     # nms=[cat['name'] for cat in cats]
 
-    try:
-        target_classes = []
-        with open(CLASS_TXT, 'r') as f:
-            for line in f.readlines():
-                target_classes.append(line.strip())
+    target_classes = []
+    with open(CLASS_TXT, 'r') as f:
+        for line in f.readlines():
+            target_classes.append(line.strip())
 
-        img_dict = {}
-        for classes in target_classes:
-            catIds = coco.getCatIds(catNms=[classes])
-            imgIds = coco.getImgIds(catIds=catIds)
-            for imgID in imgIds:
-                try:
-                    content = ''
-                    content = img_dict[imgID] + ','
-                except:
-                    pass
-                img_dict[imgID] = content + classes
-    except:
-        print("Error when open CLASS_TXT")
+    img_dict = {}
+    for classes in target_classes:
+        catIds = coco.getCatIds(catNms=[classes])
+        imgIds = coco.getImgIds(catIds=catIds)
+        for imgID in imgIds:
+            try:
+                content = ''
+                content = img_dict[imgID] + ','
+            except:
+                pass
+            img_dict[imgID] = content + classes
 
     total_progress = len(img_dict)
     progress = 0
@@ -103,17 +100,18 @@ def main():
         update_progress(progress/total_progress)
 
 
-if __name__ in '_main_':
+if __name__ in '__main__':
     """
     Input three **Relative Path**:
         1. COCO Annotation Path(*/*.json)
         2. Image Path (/*/)
         3. Save Path (/*/)
     """
-    COCO_ANNOTATIONS_PATH = '/COCO/train.json'
-    COCO_IMAGES_DIRECTORY = '/PNG/'
-    EXTRACTED_SAVING_PATH = '/train_coco_format/'
+    print("Setting Sussceful!")
+    COCO_ANNOTATIONS_PATH = '../datasets/DocLayNet_core/COCO/test.json'
+    COCO_IMAGES_DIRECTORY = '../datasets/DocLayNet_core/PNG/'
+    EXTRACTED_SAVING_PATH = 'coco_format_xml/'
     SAVE_FOLDER = EXTRACTED_SAVING_PATH.split('/')[len(EXTRACTED_SAVING_PATH.split('/'))-2]
-    CLASS_TXT = '/classes.txt' # Classes which you want to find
-
+    CLASS_TXT = 'classes.txt' # Classes which you want to find
+    
     main()

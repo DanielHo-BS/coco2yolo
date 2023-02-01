@@ -63,8 +63,8 @@ pip install -r requirements.txt
     # First way:
     ./main.sh
     # Seconud way:
-    python3 coco2xml.py
-    python3 xml2yolo.py
+    python coco2xml.py
+    python xml2yolo.py
     ```
 
 6. See the result by ``drew_bbox.py``
@@ -79,7 +79,7 @@ pip install -r requirements.txt
     2. Run in termainal
 
         ```bash
-        python3 drew_bbox.py
+        python drew_bbox.py
         ```
 
 ### Warring

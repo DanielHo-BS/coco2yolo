@@ -55,6 +55,7 @@ def update_progress(progress):
 
 def check_path(path):
     if not os.path.exists(path):
+        print("Create dir:"+path)
         os.mkdir(path)
 
 
@@ -75,11 +76,11 @@ def main():
 
         update_progress(progress/total_progress)
 
-if __name__ in '_main_':   
+if __name__ in '__main__':   
     # Setting relative path
-    LABEL_PATH = '/train_coco_format/'           
-    IMAGE_PATH = '/train_coco_format/'
-    SAVE_PATH = '/train_yolo_format/'
+    LABEL_PATH = 'coco_format_xml/'           
+    IMAGE_PATH = 'coco_format_xml/'
+    SAVE_PATH = 'yolo_format/'
     # Setting Label of Classse by Using dictionary
     status_dic = {
                 'Text':0, 'Table':1, 'Picture':2, 'Page-header':3, 'Page-footer':4, 
