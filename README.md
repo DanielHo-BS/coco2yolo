@@ -2,6 +2,11 @@
 
 It's a tool can help you convert COCO format to YOLO format.
 
+By two steps:
+
+1. Convert ``COCO.json`` to ``xml``
+2. Convert ``xml`` to ``yolo.txt``
+
 ## Install
 
 ```bash
