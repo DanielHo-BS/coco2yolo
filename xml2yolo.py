@@ -76,7 +76,7 @@ def main():
         update_progress(progress/total_progress)
 
 if __name__ in '_main_':   
-    #Setting relative path
+    # Setting relative path
     LABEL_PATH = '/train_coco_format/'           
     IMAGE_PATH = '/train_coco_format/'
     SAVE_PATH = '/train_yolo_format/'
