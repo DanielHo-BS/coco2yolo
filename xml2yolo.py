@@ -80,7 +80,7 @@ if __name__ in '_main_':
     LABEL_PATH = '/train_coco_format/'           
     IMAGE_PATH = '/train_coco_format/'
     SAVE_PATH = '/train_yolo_format/'
-    # Saving Label of Classse by Using dictionary
+    # Setting Label of Classse by Using dictionary
     status_dic = {
                 'Text':0, 'Table':1, 'Picture':2, 'Page-header':3, 'Page-footer':4, 
                 'Caption':0, 'Formula':0, 'List-item':0, 'Section-header':0, 'Title':0,

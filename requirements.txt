@@ -1,0 +1,6 @@
+beautifulsoup4==4.11.2
+ipython==8.9.0
+lxml==4.9.2
+numpy==1.21.6
+opencv_python==4.7.0.68
+pycocotools==2.0.6
